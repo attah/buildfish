@@ -5,4 +5,4 @@ FROM coderus/sailfishos-platform-sdk:latest
 # COPY entrypoint.sh /entrypoint.sh
 
 # Code file to execute when the docker container starts up (`entrypoint.sh`)
-ENTRYPOINT ["sh", "-c", "echo $GITHUB_SHA", ";", "ls", ";", "pwd"]
+ENTRYPOINT ["sh", "-c", "echo $GITHUB_SHA; echo $PWD; echo $(ls)"]
