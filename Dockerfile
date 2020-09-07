@@ -6,4 +6,4 @@ FROM coderus/sailfishos-platform-sdk:latest
 
 # Code file to execute when the docker container starts up (`entrypoint.sh`)
 # ENTRYPOINT ["sh", "-c", "echo $GITHUB_SHA; echo $PWD; echo $(ls)"]
-ENTRYPOINT ["/bin/bash", "-c", "mkdir -p /tmp/build; cp -r /github/workspace/ .; mb2 -t SailfishOS-3.3.0.14-armv7hl build"]
+ENTRYPOINT ["/bin/bash", "-c", "mkdir -p /tmp/build; cd /tmp/build; cp -r /github/workspace/* .; mb2 -t SailfishOS-3.3.0.14-armv7hl build"]
