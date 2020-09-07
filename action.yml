@@ -1,0 +1,16 @@
+# action.yml
+name: 'Hello World'
+description: 'Greet someone and record the time'
+inputs:
+  release:  # id of input
+    description: 'SailfishOS release'
+    required: true
+    default: 'latest'
+outputs:
+  rpm: # id of output
+    description: '???'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.who-to-greet }}
