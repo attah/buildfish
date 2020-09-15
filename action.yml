@@ -4,7 +4,7 @@ description: 'Build SailfishOS apps with Docker'
 inputs:
   release:
     description: 'SailfishOS release'
-    default: 'latest'
+    required: true
   arch:
     description: 'SailfishOS arch (e.g. armv7hl)'
     default: 'armv7hl'
