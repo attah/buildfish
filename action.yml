@@ -9,10 +9,6 @@ inputs:
     description: 'SailfishOS arch (e.g. armv7hl)'
     default: 'armv7hl'
 
-env:
-  SFOS_RELEASE: ${{ inputs.release }}
-  SFOS_ARCH: ${{ inputs.arch }}
-
 outputs:
   rpm: # id of output
     description: '???'
